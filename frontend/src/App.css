@@ -1,0 +1,43 @@
+.App {
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(168, 85, 247, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(168, 85, 247, 0.7);
+}
+
+/* Smooth transitions */
+* {
+  transition: background-color 0.2s ease;
+}
+
+/* Select dropdown styling for dark mode */
+select option {
+  background-color: #1e293b;
+  color: white;
+}
+
+/* Input autofill styling */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.05) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}

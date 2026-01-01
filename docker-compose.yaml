@@ -1,0 +1,39 @@
+version: "3.9"
+
+services:
+  frontend:
+    build: ./frontend
+    container_name: frontend_rls
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+  backend:
+    build: ./backend
+    container_name: backend_rls
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    depends_on:
+      - mongo
+    networks:
+      - app-network
+
+  mongo:
+    image: mongo:7
+    container_name: mongo
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - app-network
+
+volumes:
+  mongo-data:
+
+networks:
+  app-network:
+    driver: bridge
