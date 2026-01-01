@@ -1,12 +1,11 @@
-# Rate Limiter System - Amazon SDE I Portfolio Project
-
+# Rate Limiter System 
 A comprehensive **Multi-Tenant API Rate Limiter** system demonstrating distributed systems concepts, algorithm implementation, and scalability patterns - perfect for showcasing skills relevant to Amazon SDE I role.
 
 ## 🎯 Project Overview
 
 This project implements a production-grade API rate limiting system with multiple algorithms, real-time monitoring, and load testing capabilities. It simulates AWS API Gateway-style rate limiting for multi-tenant applications.
 
-## 🚀 Key Features Demonstrating Amazon SDE Skills
+## 🚀 Key Features 
 
 ### 1. **Four Rate Limiting Algorithms Implemented**
 - **Token Bucket**: Most popular, used by AWS. Tokens refill at a constant rate
@@ -66,7 +65,7 @@ This project implements a production-grade API rate limiting system with multipl
 - **Admin Panel**: API key and configuration management
 - **Load Test**: Performance testing interface
 
-## 📊 How This Demonstrates Amazon SDE Skills
+## 📊 Key Skills Demonstrated
 
 ### 1. Algorithm Design & Implementation
 ✓ **Token Bucket Algorithm** - Used by AWS API Gateway
@@ -214,38 +213,7 @@ This project demonstrates:
 - **Database**: MongoDB
 - **Deployment**: Docker-ready, Kubernetes-compatible
 
-## 🎯 Perfect for Amazon SDE I Interview
 
-This project demonstrates:
-- ✅ Distributed computing concepts
-- ✅ Scalable system design
-- ✅ Algorithm implementation and analysis
-- ✅ Data structures usage
-- ✅ Problem-solving with ambiguity
-- ✅ Working in a large distributed environment
-- ✅ Creating solutions for predictions on distributed systems
-- ✅ Building fault-tolerant, low-cost systems
-
-## 📞 Interview Talking Points
-
-1. **Why Token Bucket?** - "AWS uses Token Bucket in API Gateway because it allows burst traffic while maintaining average rate limits"
-
-2. **Scaling Strategy** - "We can distribute this using Redis for cross-instance rate limiting, with consistent hashing for key distribution"
-
-3. **Algorithm Choice** - "Different algorithms suit different use cases. Token Bucket for APIs, Leaky Bucket for streaming"
-
-4. **Performance** - "O(1) time complexity with minimal memory footprint. Can handle 10,000+ RPS per instance"
-
-5. **Trade-offs** - "In-memory vs distributed cache, accuracy vs performance, complexity vs maintainability"
-
-## 🔗 Related Amazon Technologies
-
-- **AWS API Gateway**: Uses Token Bucket for rate limiting
-- **Amazon DynamoDB**: Has built-in rate limiting with provisioned throughput
-- **AWS WAF**: Rate-based rules for DDoS protection
-- **Amazon CloudFront**: Request throttling at edge locations
-
----
 
 **Built with ❤️ for Amazon SDE I Application**
 
