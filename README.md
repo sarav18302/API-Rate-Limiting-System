@@ -5,6 +5,62 @@ A comprehensive **Multi-Tenant API Rate Limiter** system demonstrating distribut
 
 This project implements a production-grade API rate limiting system with multiple algorithms, real-time monitoring, and load testing capabilities. It simulates AWS API Gateway-style rate limiting for multi-tenant applications.
 
+```mermaid
+graph TD
+A[Frontend - React] -->|REST API| B[Backend - FastAPI]
+B -->|CRUD Operations| C[MongoDB - Database]
+B -->|Data Analytics| D[Real-Time Dashboard]
+    E[Admin User] --> A
+    F[API Consumer] -->|Requests with API Key| B
+```
+## Data Flow
+
+The data flow in the system starts with user interactions on the frontend and progresses through the backend to the database. Below is a sequence diagram illustrating the flow of a protected API request:
+
+```mermaid
+sequenceDiagram
+participant User as User
+participant Frontend as Frontend
+participant Backend as Backend
+participant Database as MongoDB
+User ->>Frontend: Enter API Key and Send Request
+Frontend ->>Backend: Forward API Request with API Key
+Backend ->>Database: Validate API Key and Fetch Rate Limit Config
+Database -->>Backend: Return Validation and Configuration
+Backend ->>Backend: Check Rate Limit Algorithm
+Backend ->>Frontend: Respond with Success or Rate Limit Exceeded
+Frontend ->>User: Display Result
+```
+
+## Getting Started
+
+To run the application locally, follow these steps:
+
+1. **Prerequisites**:
+   - Install Docker and Docker Compose.
+   - Ensure MongoDB is installed or accessible.
+
+2. **Clone the Repository**:
+   bash
+   git clone https://github.com/sarav18302/API-Rate-Limiting-System.git
+   cd API-Rate-Limiting-System
+   
+
+3. **Start the Application**:
+   - Build and start the services using Docker Compose:
+     bash
+     docker compose up --build
+     
+
+4. **Access the Application**:
+   - Frontend: Navigate to `http://localhost:3000` for the dashboard.
+   - Backend: Access API documentation at `http://localhost:8000/docs`.
+
+5. **Test the System**:
+   - Create an API key and configure rate limits using the Admin Panel.
+   - Use the Load Test page to simulate API requests and monitor performance.
+   - View real-time request statistics and logs on the Dashboard.
+
 ## 🚀 Key Features 
 
 ### 1. **Four Rate Limiting Algorithms Implemented**
@@ -236,8 +292,5 @@ This project demonstrates:
 - **Database**: MongoDB
 - **Deployment**: Docker-ready, Kubernetes-compatible
 
-## Instructions for running:
-```bash
-docker compose up --build
-```
+
 
