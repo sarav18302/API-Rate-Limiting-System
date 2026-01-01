@@ -543,7 +543,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <Shield className="w-8 h-8 text-purple-400" />
-            <span className="text-white text-xl font-bold">RateLimiter Pro</span>
+            <span className="text-white text-xl font-bold">RateLimiter</span>
           </div>
           <nav className="flex space-x-6">
             <NavLink to="/" icon={<Activity className="w-5 h-5" />} label="Dashboard" />
