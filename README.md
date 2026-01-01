@@ -1,5 +1,5 @@
 # Rate Limiter System 
-A comprehensive **Multi-Tenant API Rate Limiter** system demonstrating distributed systems concepts, algorithm implementation, and scalability patterns - perfect for showcasing skills relevant to Amazon SDE I role.
+A comprehensive **Multi-Tenant API Rate Limiter** system demonstrating distributed systems concepts, algorithm implementation, and scalability patterns.
 
 ## 🎯 Project Overview
 
@@ -15,27 +15,41 @@ This project implements a production-grade API rate limiting system with multipl
 
 ### 2. **Distributed Systems Concepts**
 - Multi-tenant architecture with per-API-key rate limiting
+  
 - In-memory storage patterns (Redis-style, ready for distributed cache)
+  
 - Concurrent request handling with async operations
+  
 - Fault-tolerant data operations with MongoDB
+  
 
 ### 3. **Data Structures & Algorithms**
 - Token Bucket implementation with time-based refills
+  
 - Queue-based Leaky Bucket using deques
+  
 - Sliding window with weighted counters
+  
 - Hash-based storage for O(1) lookups
+  
 - Time complexity optimization for high-throughput scenarios
 
 ### 4. **Real-time Analytics Dashboard**
 - Live monitoring of requests (allowed/blocked)
+
 - Algorithm performance comparison
+
 - Success rate tracking
+
 - Request logs with millisecond precision
 
 ### 5. **Load Testing Capabilities**
 - Configurable requests per second
+
 - Duration-based testing
+
 - Real-time results with detailed metrics
+
 - Performance analysis under stress
 
 ## 🏗️ Technical Architecture
@@ -68,23 +82,32 @@ This project implements a production-grade API rate limiting system with multipl
 ## 📊 Key Skills Demonstrated
 
 ### 1. Algorithm Design & Implementation
+
 ✓ **Token Bucket Algorithm** - Used by AWS API Gateway
+
 ✓ **Time Complexity Analysis** - O(1) for all rate limit checks
+
 ✓ **Space Complexity Optimization** - Efficient memory usage
 
 ### 2. System Design
 ✓ **Scalability** - Ready for distributed deployment
+
 ✓ **Multi-tier Architecture** - Frontend → Backend → Database
+
 ✓ **API Design** - RESTful with proper error handling
 
 ### 3. Data Structures
 ✓ **Hash Maps** - Fast API key lookups
+
 ✓ **Queues** - Leaky bucket implementation
+
 ✓ **Circular Buffers** - Sliding window counters
 
 ### 4. Problem Solving
 ✓ **Ambiguity Handling** - Multiple algorithm choices for different use cases
+
 ✓ **Performance Optimization** - In-memory caching patterns
+
 ✓ **Fault Tolerance** - Graceful error handling
 
 ## 🔧 API Endpoints
@@ -213,8 +236,8 @@ This project demonstrates:
 - **Database**: MongoDB
 - **Deployment**: Docker-ready, Kubernetes-compatible
 
+## Instructions for running:
+```bash
+docker compose up --build
+```
 
-
-**Built with ❤️ for Amazon SDE I Application**
-
-Demonstrates: Distributed Systems | Algorithms | Data Structures | Scalability | System Design
